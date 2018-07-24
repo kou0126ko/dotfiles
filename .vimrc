@@ -8,25 +8,12 @@ set fileformats=unix,dos,mac
 set nobackup
 set noswapfile
 
-nnoremap <silent><C-e> :e .<CR>
-
-" style
-
-syntax on
-colorscheme landscape
-set t_Co=256
-
-set number
-set showmatch
-set cursorline
-set laststatus=2
-
-set list
-set listchars=tab:~.,trail:-
-
 " script
 
 call plug#begin('~/.vim/plugged')
+
+Plug 'itchyny/landscape.vim'
+" Plug 'tomasr/molokai'
 
 Plug 'itchyny/lightline.vim'
 Plug 'cocopon/vaffle.vim'
@@ -44,6 +31,20 @@ let g:lightline = {
 	\     'right': "\u2b83"
 	\   }
 	\ }
+
+nnoremap <silent><C-e> :e .<CR>
+
+" style
+
+colorscheme landscape
+
+set number
+set showmatch
+set cursorline
+set laststatus=2
+
+set list
+set listchars=tab:~.,trail:-
 
 " footer
 
